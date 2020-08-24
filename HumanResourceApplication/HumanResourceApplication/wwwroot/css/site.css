@@ -69,3 +69,14 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+/* Form Validation Error */
+.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
+
+input.input-validation-error {
+    border: 1px solid red;
+}

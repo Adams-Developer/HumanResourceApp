@@ -1,0 +1,49 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "GetEmployee";
+}
+
+@{
+    Layout = null;
+
+}
+
+
+<form asp-controller="Employees" asp-action="AddEmployee" method="post" onsubmit="submitForm(this)">
+    <input asp-for="EmployeeId" type="hidden" />
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" type="text" class="form-control" />
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Position"></label>
+            <input asp-for="Position" type="text" class="form-control" />
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Office"></label>
+            <input asp-for="Office" type="text" class="form-control" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Age"></label>
+            <input asp-for="Age" type="number" class="form-control" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Salary"></label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input asp-for="Salary" type="number" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+            <input type="reset" value="Reset" class="btn btn-warning" />
+        </div>
+    </div>
+    
+</form>
